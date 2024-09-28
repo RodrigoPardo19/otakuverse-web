@@ -1,30 +1,30 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-				primary: "#ed1c1a",
-				secondary: "#2893a3",
-      },
+	content: [
+		'./src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
+		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
+	],
+	theme: {
+		extend: {
+			colors: {
+				background: 'var(--background)',
+				foreground: 'var(--foreground)',
+				primary: '#ed1c1a',
+				secondary: '#2893a3',
+			},
 			animation: {
-				"infinite-scroll": "infinite-scroll 10s linear infinite",
+				'infinite-scroll': 'infinite-scroll 20s linear infinite',
 			},
 			keyframes: {
-				"infinite-scroll": {
-					from: { transform: "translateX(0)" },
-					to: { transform: "translateX(-50%)" },
+				'infinite-scroll': {
+					from: { transform: 'translateX(0)' },
+					to: { transform: 'translateX(-50%)' },
 				},
 			},
-    },
-  },
-  plugins: [],
+		},
+	},
+	plugins: [],
 };
 export default config;
