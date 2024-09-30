@@ -25,3 +25,16 @@ body {
     text-wrap: balance;
   }
 }
+
+input:-webkit-autofill {
+    @apply bg-background !important; /* Usa clases de Tailwind aquí */
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    @apply bg-background !important; /* Cambia el color cuando el input está en hover o focus */
+}
+
+input:-webkit-autofill:active {
+    @apply bg-background !important; /* Color cuando el input está activo */
+}
