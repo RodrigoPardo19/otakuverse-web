@@ -1,7 +1,10 @@
+'use client';
+
 import { koulen } from '@/utils/fonts';
-import { Button, Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
+import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 import Link from 'next/link';
 import Divider from '@/shared/components/Divider';
+import { usePathname } from 'next/navigation';
 
 const menu = [
 	{
@@ -35,6 +38,7 @@ const menu = [
 ];
 
 export default function NavBar() {
+	const pathName = usePathname();
 	return (
 		<nav className="flex justify-between border-b border-slate-600 py-4">
 			<ul className="flex gap-8">
@@ -48,9 +52,9 @@ export default function NavBar() {
 							<PopoverPanel
 								transition
 								anchor="bottom"
-								className="flex flex-col divide-y divide-border rounded border border-border bg-background px-4 transition duration-200 ease-in-out">
+								className="flex flex-col divide-y divide-border rounded border border-border bg-background px-4 shadow-2xl transition duration-200 ease-in-out">
 								{el.paths.map((path) => (
-									<Link key={path.name} href={path.url} className="p-4">
+									<Link key={path.name} href={path.url} className="p-4 hover:text-primary">
 										{path.name}
 									</Link>
 								))}
@@ -60,9 +64,15 @@ export default function NavBar() {
 				))}
 			</ul>
 			<div className="flex gap-4">
-				<Link href="/login">Login</Link>
+				<Link href="/login" className={`${pathName === '/login' ? 'text-primary' : 'text-white'}`}>
+					Login
+				</Link>
 				<Divider position="vertical" />
-				<Link href="/signup">Sign up</Link>
+				<Link
+					href="/signup"
+					className={`${pathName === '/signup' ? 'text-primary' : 'text-white'}`}>
+					Sign up
+				</Link>
 			</div>
 		</nav>
 	);

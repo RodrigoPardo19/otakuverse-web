@@ -16,6 +16,7 @@ export default function SignUpForm() {
 						className="rounded-lg border border-border bg-background px-4 py-2 autofill:bg-background focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-secondary"
 						name="email"
 						placeholder="example@gmail.com"
+						autoFocus
 					/>
 				</Field>
 				<Field className="flex flex-col gap-2">

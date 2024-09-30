@@ -5,7 +5,7 @@ import { XIcon } from './Icons/XIcon';
 
 export default function Footer() {
 	return (
-		<footer className="flex flex-col items-center justify-center gap-4 border-t border-border py-4">
+		<footer className="mt-4 flex flex-col items-center justify-center gap-4 border-t border-border py-4">
 			<div className="flex gap-8">
 				<XIcon width="2rem" height="2rem" className="cursor-pointer hover:text-primary" />
 				<InstagramIcon width="2rem" height="2rem" className="cursor-pointer hover:text-primary" />
